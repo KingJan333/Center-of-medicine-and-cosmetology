@@ -36,8 +36,17 @@ $(document).ready(function () {
 
 $(function () {
   $(".button__up").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html, body").animate({ scrollTop: 0 }, 500);
     return false;
+  });
+  // show up button
+  $(document).scroll(function(){
+    var y = $(this).scrollTop();
+    if (y > 500) {
+      $(".button__up").fadeIn();
+    } else {
+      $(".button__up").fadeOut();
+    }
   });
 });
 
@@ -50,17 +59,21 @@ $(document).ready(function () {
   });
 });
 
-// $(document).ready(function(e){
-//   $('.js-card-btn').click(function(){
-//     $('.services__cards').css('display', 'none').animate({opacity: 0}, 198);
-//     $('.services__cards_active').css('display', 'grid').animate({opacity: 1}, 198);
-//   })
-// });
-$(document).ready(function(e){
-  $('.js-card-btn').click(function(){
-    $('.services__visited').toggle('services__visited_active');
-    // $('services__visited_active').toggle('.services__visited');
-  })
+$(document).ready(function(){
+  // $('.js-card-btn_active').addClass('services__visited_active');
+  // // $('.js-card-btn_active').on("click", function(){
+  // //   $('.services__visited_active').removeClass('services__visited');
+  // // });
+  // $('js-card-btn').removeClass('.services__visited_active').addClass('.services__visited_');
+  // // $('.js-card-btn').on("click", function(){
+  // //   $('.services__visited').removeClass('services__visited_active');  
+  // //   // $('services__visited_active').toggle('.services__visited');
+  // // })
+
+  $('.js-card-btn').click(function(e){
+    e.preventDefault();
+    $('.js-card-btn').removeClass
+  });
 });
 
 $(document).ready(function (){
