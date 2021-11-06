@@ -805,6 +805,14 @@ ul .diseases__point_left {
   display: none;
 }
 
+.slider__block {
+  display: none;
+}
+
+.slider__block_active {
+  display: block;
+}
+
 .section__services {
   margin-top: 120px;
   margin-bottom: 120px;
@@ -855,6 +863,10 @@ ul .diseases__point_left {
   transition: 0.4s ease;
 }
 .card__title_btn.card__title_btn:hover {
+  border-bottom: 2px solid #8a8a8a;
+}
+
+.card__title_btnActive {
   border-bottom: 2px solid #5700d8;
   color: #212121;
 }
@@ -871,6 +883,19 @@ ul .diseases__point_left {
 
 .services__visited_active {
   display: block;
+}
+
+.active__card {
+  display: block;
+}
+
+.active__card:active {
+  border-bottom: 2px solid #5700d8;
+  color: #212121;
+}
+
+.notActive__card {
+  display: none;
 }
 
 .services__card {
@@ -975,6 +1000,34 @@ ul .diseases__point_left {
   font-weight: 700;
 }
 
+.reviews__slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 0px;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.reviews__slider .slick-arrow {
+  top: 35%;
+}
+.reviews__slider .slick-arrow.slick-prev {
+  left: -80px;
+  background: url(../img/arrow-prev.svg) center center no-repeat;
+  background-color: #5700d8;
+}
+
+.reviews__slider .slick-arrow.slick-next {
+  right: -80px;
+  background: url(../img/arrow-next.svg) center center no-repeat;
+  background-color: #5700d8;
+}
+
 .footer {
   background-color: #212121;
   padding: 63px 0;
@@ -1024,6 +1077,7 @@ ul .diseases__point_left {
 }
 
 .modelWindow__bg {
+  display: none;
   background: url(../img/form-bg.png) center center no-repeat;
   height: 515px;
 }
@@ -1036,6 +1090,7 @@ ul .diseases__point_left {
 }
 
 .modelWindow__bg_discount {
+  display: none;
   background-color: #f9fafb;
   height: 515px;
   margin-top: 100px;

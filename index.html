@@ -185,35 +185,32 @@
       <div class="model">
         <span class="modelWindow__close"><i class="fas fa-times"></i></span>
         <h2 class="model__title">Бесплатная<br /> консультация</h2>
-        <div action="#" class="form__modelWindow form__elements">
+        <div class="form__modelWindow form__elements form__popup-js" method="POST">
           <input
-            class="input__modelWindow"
+            id="namePopUp"
+            class="input__modelWindow name-js"
             type="text"
             name="name"
             placeholder="Ваше имя"
-            required
-            autocomplete="on"
           />
           <input
-            class="input__modelWindow"
+            id="telPopUp"
+            class="input__modelWindow telPopUp-js"
             type="tel"
             name="tel"
             placeholder="Телефон"
-            required
-            autocomplete="on"
           />
           <input
-            class="input__modelWindow"
+            id="emailPopUp"
+            class="input__modelWindow email-js"
             type="email"
             name="email"
             placeholder="E-mail"
-            required
-            autocomplete="on"
           />
           <div class="button__modelWidow button">
-            <a type="submit" class="model__btn btn form__btn js-popup-sent">
+            <button type="submit" class="model__btn btn form__btn js-popup-sent form-popup-sent-js">
               Записаться бесплатно
-            </a>
+            </button>
             <p class="button__confidentiality_modelWidowbtn button__confidentiality_modelWidow button__confidentiality">
               Нажимая на кнопку “Записаться бесплатно”, вы<br />соглашаетесь с
               <a href="">политикой конфиденциальности</a>
@@ -237,7 +234,7 @@
         </p>
         <div class="sentmodel__img"></div>
         <div class="button__modelWidow button">
-          <a type="submit" class="sent__btn btn form__btn js-popup-sent_close">Понятно</a>
+          <botton type="submit" class="sent__btn btn form__btn js-popup-sent_close">Понятно</button>
         </div>
       </div>
     </div>
@@ -364,41 +361,63 @@
             <p class="form__text">
               Заполните форму ниже и пройдите бесплатную консультацию
             </p>
-            <div class="form__elements" id="form">
-              <input
-                type="text"
-                name="name"
-                placeholder="Ваше имя"
-                required
-                autocomplete="on"
-              />
-              <input
-                type="tel"
-                name="tel"
-                placeholder="Телефон"
-                required
-                autocomplete="on"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                required
-                autocomplete="on"
-              />
-              <div class="button">
-                <a type="submit" class="btn form__btn">
-                  Бесплатная консультация
-                </a>
-                <p class="button__confidentiality">
-                  Нажимая на кнопку, вы соглашаетесь<br />с
-                  <a href="">политикой конфиденциальности</a>
-                </p>
+            <div class="form__wrapper">
+              <div class="form__elements form-js" id="form" method="POST">
+                <input
+                  id="name"
+                  class="nameJs"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                />
+                <input
+                  id="tel"
+                  class="telJs"
+                  type="tel"
+                  name="tel"
+                  placeholder="Телефон"
+                />
+                <input
+                  id="email"
+                  class="emailJs"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+                <div class="button">
+                  <button type="submit" class="btn form__btn form__btn_js">
+                    Бесплатная консультация
+                  </button>
+                  <p class="button__confidentiality">
+                    Нажимая на кнопку, вы соглашаетесь<br />с
+                    <a href="">политикой конфиденциальности</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="modelWindow__bg">
+    <div class="container">
+        <h2 class="modelWindow__title">Ваша заявка отправлена</h2>
+        <p class="modelWindow__text">Наш менеджер скоро перезвонит вам, чтобы уточнить информацию</p>
+    </div>
+</div>
+
+<div class="modelWindow__bg_discount">
+    <div class="container">
+        <div class="modelWindow__discount_items">
+            <div class="modelWindow__discount_text">
+                <h2 class="modelWindow__title">Ваша заявка отправлена</h2>
+                <p class="modelWindow__text">Наш менеджер скоро перезвонит вам, чтобы уточнить информацию</p>
+            </div>
+            <div class="modelWindow__discount_img">
+                <img class="modelWindow__img" src="./img/dock3.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
       <div class="section__specialist" id="specialist">
         <div class="container">
           <div class="specialist__element">
@@ -436,113 +455,222 @@
           <div class="services__card_bg">
             <div class="services__card_title">
               <h5 class="card__title">
-                <div type="button" class="card__title_btn">Дипломы</div>
+                <button
+                  type="button"
+                  class="card__title_btn js-specialist-btn-active"
+                >
+                  Дипломы
+                </button>
               </h5>
               <h5 class="card__title">
-                <div type="button" class="card__title_btn">
+                <button type="button" class="card__title_btn js-specialist-btn">
                   Сертификаты
-                </div>
+                </button>
               </h5>
             </div>
-            <div class="slider">
-              <div class="services__cards_slider services__cards">
-                <div class="services__card_slider services__card">
-                  <div class="card__item_number">
-                    <img class="desctop__img" src="./img/diploma.png" alt="" />
-                    <img class="mobile__img" src="./img/diplomaMB.png" alt="" />
-                  </div>
-                  <div class="card__item_info">
-                    <p class="item__info_text">
-                      Диплом квалификации врача по специальности “Лечебное дело”
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="services__cards_slider services__cards">
-                <div class="services__card_slider services__card">
-                  <div class="card__item_number">
-                    <img class="desctop__img" src="./img/diploma2.png" alt="" />
-                    <img
-                      class="mobile__img"
-                      src="./img/diploma2MB.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__item_info">
-                    <p class="item__info_text">
-                      Диплом о профессиональной переподготовке в сфере
-                      рефлексотерапии
-                    </p>
+            <div class="slider__block_active">
+              <div class="slider">
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img class="desctop__img" src="./img/diploma.png" alt="" />
+                      <img class="mobile__img" src="./img/diplomaMB.png" alt="" />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом квалификации врача по специальности “Лечебное дело”
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="services__cards_slider services__cards">
-                <div class="services__card_slider services__card">
-                  <div class="card__item_number">
-                    <img
-                      class="desctop__img"
-                      src="./img/certificate1.png"
-                      alt=""
-                    />
-                    <img
-                      class="mobile__img"
-                      src="./img/certificate1MB.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__item_info">
-                    <p class="item__info_text">
-                      Диплом о профессиональной переподготовке в сфере
-                      рефлексотерапии
-                    </p>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img class="desctop__img" src="./img/diploma2.png" alt="" />
+                      <img
+                        class="mobile__img"
+                        src="./img/diploma2MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="services__cards_slider services__cards">
-                <div class="services__card_slider services__card">
-                  <div class="card__item_number">
-                    <img
-                      class="desctop__img"
-                      src="./img/certificate2.png"
-                      alt=""
-                    />
-                    <img
-                      class="mobile__img"
-                      src="./img/certificate2MB.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card__item_info">
-                    <p class="item__info_text">
-                      Диплом о профессиональной переподготовке в сфере
-                      рефлексотерапии
-                    </p>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate1.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate1MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="services__cards_slider services__cards">
-                <div class="services__card_slider services__card">
-                  <div class="card__item_number">
-                    <img
-                      class="desctop__img"
-                      src="./img/certificate3.png"
-                      alt=""
-                    />
-                    <img
-                      class="mobile__img"
-                      src="./img/certificate3MB.png"
-                      alt=""
-                    />
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate2.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate2MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
                   </div>
-                  <div class="card__item_info">
-                    <p class="item__info_text">
-                      Диплом о профессиональной переподготовке в сфере
-                      рефлексотерапии
-                    </p>
+                </div>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate3.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate3MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="slider__block">
+              <div class="slider">
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img class="desctop__img" src="./img/diploma.png" alt="" />
+                      <img class="mobile__img" src="./img/diplomaMB.png" alt="" />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Сертификат квалификации врача по специальности “Лечебное дело”
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img class="desctop__img" src="./img/diploma2.png" alt="" />
+                      <img
+                        class="mobile__img"
+                        src="./img/diploma2MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Сертификат о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate1.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate1MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Сертификат профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate2.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate2MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__cards_slider services__cards">
+                  <div class="services__card_slider services__card">
+                    <div class="card__item_number">
+                      <img
+                        class="desctop__img"
+                        src="./img/certificate3.png"
+                        alt=""
+                      />
+                      <img
+                        class="mobile__img"
+                        src="./img/certificate3MB.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card__item_info">
+                      <p class="item__info_text">
+                        Диплом о профессиональной переподготовке в сфере
+                        рефлексотерапии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -557,20 +685,20 @@
           <div class="services__card_bg">
             <div class="services__card_title">
               <h5 class="card__title">
-                <div
+                <button
                   type="button"
-                  class="card__title_btn js-card-btn_active"
+                  class="card__title_btn js-card-btn-active"
                 >
                   Поездка в Уфу
-                </div>
+                </button>
               </h5>
               <h5 class="card__title">
-                <div type="button" class="card__title_btn js-card-btn">
+                <button type="button" class="card__title_btn js-card-btn">
                   Мы приезжаем к Вам
-                </div>
+                </button>
               </h5>
             </div>
-            <div class="services__visited services__visited_active">
+            <div class="services__visited_active">
               <div class="services__cards">
                 <div class="services__card mobil">
                   <div class="card__item_number">
@@ -718,36 +846,76 @@
           <p class="reviews__subtitle general__subtitle">
             авторская методика в действии
           </p>
-          <div class="reviews__elements">
-            <div class="reviews__video">
-              <iframe
-                class="video"
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/T6GlAqSVy_Y"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+          <div class="reviews__slider">
+            <div>
+              <div class="reviews__elements">
+                <div class="reviews__video">
+                  <iframe
+                    class="video"
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/T6GlAqSVy_Y"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="reviews__info">
+                  <h3 class="review__name">Янова Антонина Павловна</h3>
+                  <span class="review__age">84 года</span>
+                  <div class="specialist__line"></div>
+                  <p class="reviews__text">
+                    <span>Диагноз:</span> Остеохандроз 3 степени
+                  </p>
+                  <p class="reviews__text">
+                    <span>Назначенное лечение:</span> 4 кубика Аллопланта
+                    внутривенно
+                  </p>
+                  <p class="reviews__text">
+                    <span>Результат:</span> Сложно сказать, почему
+                    непосредственные участники технического прогресса освещают
+                    чрезвычайно интересные особенности картины в целом, однако
+                    конкретные выводы, разумеется, ограничены исключительно
+                    образом мышления.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="reviews__info">
-              <h3 class="review__name">Янова Антонина Павловна</h3>
-              <span class="review__age">84 года</span>
-              <div class="specialist__line"></div>
-              <p class="reviews__text">
-                <span>Диагноз:</span> Остеохандроз 3 степени
-              </p>
-              <p class="reviews__text">
-                <span>Назначенное лечение:</span> 4 кубика Аллопланта
-                внутривенно
-              </p>
-              <p class="reviews__text">
-                <span>Результат:</span> Сложно сказать, почему непосредственные
-                участники технического прогресса освещают чрезвычайно интересные
-                особенности картины в целом, однако конкретные выводы,
-                разумеется, ограничены исключительно образом мышления.
-              </p>
+            <div>
+              <div class="reviews__elements">
+                <div class="reviews__video">
+                  <iframe
+                    class="video"
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/T6GlAqSVy_Y"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="reviews__info">
+                  <h3 class="review__name">Янова Антонина Павловна</h3>
+                  <span class="review__age">84 года</span>
+                  <div class="specialist__line"></div>
+                  <p class="reviews__text">
+                    <span>Диагноз:</span> Остеохандроз 3 степени
+                  </p>
+                  <p class="reviews__text">
+                    <span>Назначенное лечение:</span> 4 кубика Аллопланта
+                    внутривенно
+                  </p>
+                  <p class="reviews__text">
+                    <span>Результат:</span> Сложно сказать, почему
+                    непосредственные участники технического прогресса освещают
+                    чрезвычайно интересные особенности картины в целом, однако
+                    конкретные выводы, разумеется, ограничены исключительно
+                    образом мышления.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -763,31 +931,36 @@
               <p class="form__text">
                 Заполните форму ниже и пройдите бесплатную консультацию
               </p>
-              <div action="#" class="form__elements" id="form">
+              <div
+                class="form__elements form-js form-js2"
+                id="form"
+                method="POST"
+              >
                 <input
+                  id="name2"
+                  class="nameJs2"
                   type="text"
                   name="name"
                   placeholder="Ваше имя"
-                  autocomplete="on"
                 />
                 <input
+                  id="tel2"
+                  class="telJs2"
                   type="tel"
                   name="tel"
                   placeholder="Телефон"
-                  required
-                  autocomplete="on"
                 />
                 <input
+                  id="email2"
+                  class="emailJs2"
                   type="email"
                   name="email"
                   placeholder="E-mail"
-                  required
-                  autocomplete="on"
                 />
                 <div class="button">
-                  <div type="submit" class="btn form__btn">
+                  <button type="submit" class="btn form__btn form__btn_js2">
                     Бесплатная консультация
-                  </div>
+                  </button>
                   <p class="button__confidentiality">
                     Нажимая на кнопку, вы соглашаетесь<br />с
                     <a href="">политикой конфиденциальности</a>
@@ -800,14 +973,44 @@
             </div>
             <div class="form__discount_btnUp">
               <a href="#" class="button__up dell__item">
-                <svg aria-hidden="true" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor" d="m240.971 130.524 194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"/>
+                <svg
+                  aria-hidden="true"
+                  data-prefix="fas"
+                  data-icon="chevron-up"
+                  class="svg-inline--fa fa-chevron-up fa-w-14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m240.971 130.524 194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"
+                  />
                 </svg>
               </a>
             </div>
           </div>
         </div>
       </div>
+      <div class="modelWindow__bg">
+    <div class="container">
+        <h2 class="modelWindow__title">Ваша заявка отправлена</h2>
+        <p class="modelWindow__text">Наш менеджер скоро перезвонит вам, чтобы уточнить информацию</p>
+    </div>
+</div>
+
+<div class="modelWindow__bg_discount">
+    <div class="container">
+        <div class="modelWindow__discount_items">
+            <div class="modelWindow__discount_text">
+                <h2 class="modelWindow__title">Ваша заявка отправлена</h2>
+                <p class="modelWindow__text">Наш менеджер скоро перезвонит вам, чтобы уточнить информацию</p>
+            </div>
+            <div class="modelWindow__discount_img">
+                <img class="modelWindow__img" src="./img/dock3.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
     </main>
     <footer class="footer">
   <div class="container">
@@ -826,7 +1029,6 @@
   </div>
 </footer>
 
-    
 
     <script
       src="https://kit.fontawesome.com/2d49c6b34d.js"
@@ -839,6 +1041,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
