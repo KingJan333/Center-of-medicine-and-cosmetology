@@ -1946,6 +1946,12 @@ ul .diseases__point_left {
   .section__reviews {
     margin-bottom: 30px;
   }
+  .reviews__slider .slick-prev{
+    display: none;
+  }
+  .reviews__slider .slick-next{
+    display: none;
+  }
 
   .privacy {
     text-align: center;
